@@ -1,13 +1,14 @@
-import axios from 'axios';
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 
-const fetchData = async () => {
-    const requestData = await axios.get('api');
-    console.log(requestData)
-    
-}
+import ReactDOM from 'react-dom'
 
-const hey = fetchData()
-console.log(hey)
-console.log('as')
+import MyComponent from './components/MyComponent';
+import request from './request';
+
+
+const hey = request()
+
+const domContainer = document.getElementById('react-container');
+console.log(domContainer)
+ReactDOM.render(MyComponent(), domContainer);
