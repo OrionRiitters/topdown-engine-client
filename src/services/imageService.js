@@ -1,8 +1,9 @@
 import axios from 'axios';
 
 export default {
-    getInitialData: async () => {
-        const res = await axios.get('/api');
+    getInitialImages: async () => {
+        const res = await axios.get('/api/');
+        console.log(res);
         return res
     }
 }
